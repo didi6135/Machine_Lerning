@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js" charset="utf-8"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script> -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis"></script>
+    <script defer src="main.js"></script>
+    <title>Molti linear regression</title>
+</head>
+<body>
+
+    <h1>Multi linear regression</h1>
+
+<div class="changeData">
+    <div class="epocheChoose">
+        <label>Choose number of epochs:</label><br>
+        <input id="epocheNumber" type="number">
+        <p>By default the number is 1000</p>
+    </div>
+    <br>
+    <div class="learningRate">
+        <label>Choose Learning rate:</label><br>
+        <input id="learningRate" type="number">
+        <p>By default the number is 0.01</p>
+    </div>
+    <button onclick="trainModel()">Set Change</button>
+</div>
+
+
+    <button onclick="trainModel()">Train model</button>
+    <h3 id="orginalData"></h3>
+    <h3 id="predictedData"></h3>
+    <h3 id="lossFunction"></h3>
+    <h3 id="weight"></h3>
+
+    <div id="myDiv"></div>
+</body>
+</html>
